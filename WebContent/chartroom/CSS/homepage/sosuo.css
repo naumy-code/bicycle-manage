@@ -1,0 +1,28 @@
+@charset "UTF-8";
+#box{
+        width: 380px;
+        margin-left:1000px;
+        font-family: 'Microsoft YaHei';
+        font-size: 14px;
+    }
+    input{
+        width: 260px;
+        border: 1px solid #e2e2e2;
+        height: 30px;
+        float: left;
+        background-image: url(images/search.jpg);
+        background-repeat: no-repeat;
+        background-size: 25px;
+        padding:0 0 0 30px;
+        background-position:5px center;
+    }
+    #search{
+        width: 80px;
+        height: 32px;
+        float: right;
+        background: black;
+        color: white;
+        text-align: center;
+        line-height: 32px;
+        cursor: pointer;
+    }

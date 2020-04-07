@@ -1,0 +1,32 @@
+#leixing {
+	border: 3px solid balck;
+	width: 95%;
+	height:500px;
+}
+
+#bic{
+	padding: 0;
+	width: 95%;
+	height:600px;
+	border: 3px solid balck;
+}
+ul {
+	margin: 0px 0px 30px 0px;
+	margin-right: auto;
+	margin-left: auto; 
+	width: 100%;
+	border:1px solid red;
+	height:600px;
+}
+
+ul li{
+	padding: 0;
+	margin-left: 178px;
+	list-style: none;
+	width: 240px;
+	height: 440px;
+	float: left;
+	margin-right: 20px;
+	transition: transform 0.1s;
+}
+

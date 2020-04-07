@@ -1,0 +1,31 @@
+/* ×¢²áµÄ½çÃæ */
+@charset "UTF-8";
+
+#content {
+   height: 300px;
+	width: 500px;
+	margin-top: 30px;
+	margin-right: auto;
+	margin-left: 450px;
+	text-align: center;
+}
+
+table {
+	padding:5px 2px;
+	
+}
+
+td {
+	text-align: center;
+}
+
+h1 {
+	margin-left: -100px;
+}
+#divcontent {
+	width: 900px;
+	background-color: #FCFDEF;
+	border: 1px solid #EEEDDB;
+	MARGIN-RIGHT: auto;
+	MARGIN-LEFT: auto;
+}

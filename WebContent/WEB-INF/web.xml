@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <!-- 缂栫爜杩囨护鍣?-->
+  <filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>com.store.web.filter.EncodingFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	
+  <display-name>WEB</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  	
+	
+
+    <servlet>
+
+        <servlet-name>dispatcher</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>dispatcher</servlet-name>
+        <url-pattern>*.form</url-pattern>
+    </servlet-mapping>
+	
+    
+  <servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.client.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+  	
+  	<servlet>
+		<servlet-name>LogoutServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.client.LogoutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LogoutServlet</servlet-name>
+		<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+  
+  <servlet>
+		<servlet-name>DisplayChart</servlet-name>
+		<servlet-class>
+			org.jfree.chart.servlet.DisplayChart
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DisplayChart</servlet-name>
+		<url-pattern>/servlet/DisplayChart</url-pattern>
+	</servlet-mapping>
+  
+  
+  <servlet>
+		<servlet-name>AddProductServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.manager.AddProductServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddProductServlet</servlet-name>
+		<url-pattern>/addProduct</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AddMessageServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.client.AddMessageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddMessageServlet</servlet-name>
+		<url-pattern>/AddMessage</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AddgroupProductServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.manager.AddgroupProductServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddgroupProductServlet</servlet-name>
+		<url-pattern>/addgroupProduct</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ListProductServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.manager.ListProductServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ListProductServlet</servlet-name>
+		<url-pattern>/listProduct</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ListgroupProductServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.manager.ListgroupProductServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ListgroupProductServlet</servlet-name>
+		<url-pattern>/listgroupProduct</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ShowProductByPageServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.client.ShowProductByPageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShowProductByPageServlet</servlet-name>
+		<url-pattern>/showProductByPage</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ShowgroupProductByPageServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.client.ShowgroupProductByPageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShowgroupProductByPageServlet</servlet-name>
+		<url-pattern>/showgroupProductByPage</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>FindProductByIdServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.client.FindProductByIdServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FindProductByIdServlet</servlet-name>
+		<url-pattern>/findProductById</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>FindMessageByIdServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.client.FindMessageByIdServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FindMessageByIdServlet</servlet-name>
+		<url-pattern>/findMessageById</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>FindgroupProductByIdServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.client.FindgroupProductByIdServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FindgroupProductByIdServlet</servlet-name>
+		<url-pattern>/findgroupProductById</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AddCartServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.client.AddCartServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddCartServlet</servlet-name>
+		<url-pattern>/addCart</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AddgroupCartServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.client.AddgroupCartServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddgroupCartServlet</servlet-name>
+		<url-pattern>/addgroupCart</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ChangeCartServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.client.ChangeCartServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ChangeCartServlet</servlet-name>
+		<url-pattern>/changeCart</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CreateOrderServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.client.CreateOrderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CreateOrderServlet</servlet-name>
+		<url-pattern>/createOrder</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CreategroupOrderServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.client.CreategroupOrderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CreategroupOrderServlet</servlet-name>
+		<url-pattern>/creategroupOrder</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>FindOrderByUserServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.client.FindOrderByUserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FindOrderByUserServlet</servlet-name>
+		<url-pattern>/findOrderByUser</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>FindgroupOrderByUserServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.client.FindgroupOrderByUserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FindgroupOrderByUserServlet</servlet-name>
+		<url-pattern>/findgroupOrderByUser</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>FindMessageByUserServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.client.FindMessageByUserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FindMessageByUserServlet</servlet-name>
+		<url-pattern>/findMessageByUser</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>FindOrderByIdServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.client.FindOrderByIdServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FindOrderByIdServlet</servlet-name>
+		<url-pattern>/findOrderById</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>FindOrdersServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.manager.FindOrdersServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FindOrdersServlet</servlet-name>
+		<url-pattern>/findOrders</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>FindgroupOrdersServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.manager.FindgroupOrdersServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FindgroupOrdersServlet</servlet-name>
+		<url-pattern>/findgroupOrders</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>FindMessageServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.manager.FindMessageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FindMessageServlet</servlet-name>
+		<url-pattern>/findMessage</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>OnLinePayServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.client.OnLinePayServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OnLinePayServlet</servlet-name>
+		<url-pattern>/onlinepay</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>PayServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.client.PayServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PayServlet</servlet-name>
+		<url-pattern>/pay</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CallBackServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.client.CallBackServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CallBackServlet</servlet-name>
+		<url-pattern>/callback</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ChangeOrderStateServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.client.ChangeOrderStateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ChangeOrderStateServlet</servlet-name>
+		<url-pattern>/orderstate</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ChangegroupOrderStateServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.client.ChangegroupOrderStateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ChangegroupOrderStateServlet</servlet-name>
+		<url-pattern>/grouporderstate</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DownloadServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.manager.DownloadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DownloadServlet</servlet-name>
+		<url-pattern>/download</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>FindProductByManyConditionServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.manager.FindProductByManyConditionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FindProductByManyConditionServlet</servlet-name>
+		<url-pattern>/findProductByManyCondition</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>FindMessageByManyConditionServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.manager.FindMessageByManyConditionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FindMessageByManyConditionServlet</servlet-name>
+		<url-pattern>/findMessageByManyCondition</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>FindgroupProductByManyConditionServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.manager.FindgroupProductByManyConditionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FindgroupProductByManyConditionServlet</servlet-name>
+		<url-pattern>/findgroupProductByManyCondition</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EditProductServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.manager.EditProductServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditProductServlet</servlet-name>
+		<url-pattern>/editProduct</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EditMessageboardServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.client.EditMessageboardServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditMessageboardServlet</servlet-name>
+		<url-pattern>/editMessage</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EditgroupProductServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.manager.EditgroupProductServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditgroupProductServlet</servlet-name>
+		<url-pattern>/editgroupProduct</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DeleteProductServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.manager.DeleteProductServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteProductServlet</servlet-name>
+		<url-pattern>/deleteProduct</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DeletegroupProductServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.manager.DeletegroupProductServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeletegroupProductServlet</servlet-name>
+		<url-pattern>/deletegroupProduct</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DeleteMessageServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.manager.DeleteMessageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteMessageServlet</servlet-name>
+		<url-pattern>/deleteMessage</url-pattern>
+	</servlet-mapping>	
+	
+	<servlet>
+		<servlet-name>FindOrderByManyConditionServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.manager.FindOrderByManyConditionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FindOrderByManyConditionServlet</servlet-name>
+		<url-pattern>/findOrderByManyCondition</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>FindgroupOrderByManyConditionServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.manager.FindgroupOrderByManyConditionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FindgroupOrderByManyConditionServlet</servlet-name>
+		<url-pattern>/findgroupOrderByManyCondition</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DelOrderByIdServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.client.DelOrderByIdServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DelOrderByIdServlet</servlet-name>
+		<url-pattern>/delOrderById</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>DelgroupOrderByIdServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.client.DelgroupOrderByIdServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DelgroupOrderByIdServlet</servlet-name>
+		<url-pattern>/delgroupOrderById</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DelMessageByIdServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.client.DelMessageByIdServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DelMessageByIdServlet</servlet-name>
+		<url-pattern>/delMessageById</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>imageCode</servlet-name>
+		<servlet-class>com.store.utils.CheckImageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>imageCode</servlet-name>
+		<url-pattern>/imageCode</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RegisterServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.client.RegisterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegisterServlet</servlet-name>
+		<url-pattern>/register</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ActiveUserServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.client.ActiveUserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ActiveUserServlet</servlet-name>
+		<url-pattern>/activeUser</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>MyAccountServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.client.MyAccountServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MyAccountServlet</servlet-name>
+		<url-pattern>/myAccount</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ListNoticeServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.manager.ListNoticeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ListNoticeServlet</servlet-name>
+		<url-pattern>/manager/ListNoticeServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>AddNoticeServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.manager.AddNoticeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddNoticeServlet</servlet-name>
+		<url-pattern>/manager/AddNoticeServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UpdateNoticeServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.manager.UpdateNoticeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateNoticeServlet</servlet-name>
+		<url-pattern>/manager/UpdateNoticeServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>FindByIdNoticeServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.manager.FindByIdNoticeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FindByIdNoticeServlet</servlet-name>
+		<url-pattern>/manager/FindByIdNoticeServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EditNoticeServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.manager.EditNoticeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditNoticeServlet</servlet-name>
+		<url-pattern>/manager/EditNoticeServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DeleteNoticeServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.manager.DeleteNoticeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteNoticeServlet</servlet-name>
+		<url-pattern>/manager/DeleteNoticeServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>MenuSearchServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.client.MenuSearchServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MenuSearchServlet</servlet-name>
+		<url-pattern>/MenuSearchServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ShowIndexServlet</servlet-name>
+		<servlet-class>com.store.web.servlet.client.ShowIndexServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShowIndexServlet</servlet-name>
+		<url-pattern>/ShowIndexServlet</url-pattern>
+	</servlet-mapping>
+</web-app>

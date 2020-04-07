@@ -1,0 +1,39 @@
+package com.store.web.servlet.client;
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.store.domain.Order;
+import com.store.service.OrderService;
+/**
+ * 通过id查询订单
+ * @author admin
+ *
+ */
+public class FindOrderByIdServlet extends HttpServlet {
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		doPost(request, response);
+	}
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		//1.获取用户类型
+		String type=request.getParameter("type");		
+		//2.得到要查询的订单的id
+		String id = request.getParameter("id");
+		//3.根据id查找订单
+		OrderService service = new OrderService();
+		Order order = service.findOrderById(id);
+        //4.将查询出的订单信息添加到request作用域中
+		request.setAttribute("order", order);
+		//5.如果用户类型不为null，则请求转发到view.jsp页面，否则转发到orderInfo.jsp页面
+		if(type!=null){
+			request.getRequestDispatcher("/Ordermanagement/adminvieworders.jsp").forward(request, response);
+			return;
+		}
+		request.getRequestDispatcher("/Ordermanagement/orderInfo.jsp").forward(request, response);
+	}
+
+}

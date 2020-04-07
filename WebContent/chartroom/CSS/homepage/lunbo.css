@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+#container {
+	width: 1920px;
+	height: 800px;
+	overflow: hidden;
+}
+
+#photo {
+	width: 5760px;
+	animation: switch 5s ease-out infinite;
+}
+
+#photo > img {
+	float: left;
+	width: 1920px;
+	height: 800px;
+}
+
+@keyframes switch {
+	0%, 25% {
+		margin-left: 0;
+	}
+	35%, 60% {
+		margin-left: -1920px;
+	}
+	70%, 100% {
+		margin-left: -3840px;
+	}
+}
+/*±³¾°Í¼Æ¬*/
+#d1{
+	width: 100%;
+	height: 1000px;
+	border: 2px solid red;
+	
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	display: block;
+	margin: 0 auto;
+	box-sizing: border-box;
+	overflow-x: hidden;
+}
