@@ -8,7 +8,10 @@
 ## 4.商品留言
 ## 5.团购报名
 
+<<<<<<< master
 ![image](https://github.com/naumy-code/bicycle-manage/blob/master/WebContent/test/QQ%E6%88%AA%E5%9B%BE20200510202856.png)
+=======
+>>>>>>> da998d2 commit
 
 
 
