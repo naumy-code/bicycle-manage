@@ -8,7 +8,7 @@
 ## 4.商品留言
 ## 5.团购报名
 
-![](https://github.com/naumy-code/bicycle-manage/blob/master/WebContent/test/2.png)
+![](https://github.com/naumy-code/bicycle-manage/blob/master/7.png)
 
 
 
