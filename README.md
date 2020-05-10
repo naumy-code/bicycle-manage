@@ -14,7 +14,7 @@
 ![image](https://github.com/naumy-code/bicycle-manage/raw/master/WebContent/test/2.png)
 ###### 后台管理中心添加商品
 ![image](https://github.com/naumy-code/bicycle-manage/raw/master/WebContent/test/3.png)
-####### 商城首页
+###### 商城首页
 ![image](https://github.com/naumy-code/bicycle-manage/raw/master/WebContent/test/4.png)
 ###### 个人中心
 ![image](https://github.com/naumy-code/bicycle-manage/raw/master/WebContent/test/5.png)
