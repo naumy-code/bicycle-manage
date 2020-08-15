@@ -1,5 +1,11 @@
 [我的博客：naumy](https://blog.csdn.net/naumy )\
                 看前须知：这是我写参考网上代码写的课程设计 下载后请项目改名为newproject，因为配置文件xml中有的使用了绝对地址。部分功能可能            不够完善，仅供学习参考使用。本项目采用了servlet作为控制层。数据库采用mysql，jdk采用14。服务器为tomcat。本项目后期将不再更新。谢谢。
+
+写的个人管理模块的小demo，希望有所帮助。
+链接：[https://pan.baidu.com/s/1Nu6IzdWFCTAy1wMt-_kbAg](https://pan.baidu.com/s/1Nu6IzdWFCTAy1wMt-_kbAg )
+提取码：iyyb
+
+
 ### bicycle-manage（自行车购物系统）
     只是一个简单的自行车购物商城 采用mvc模式的自行车购物商城 包含的模块有：
 #### 1.用户登录（包括注册）
